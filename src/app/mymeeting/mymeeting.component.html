@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="column large-10">
+        <div class="row">
+            <div class="column large-3">
+                <ul class="side-nav">
+                    <li class="active"><a [routerLink]="['MyApplyMeeting',1]"><small>我申请的会议</small></a></li>
+                    <li><a [routerLink]="['MyParticipationMeeting']"><small>我参与的会议</small></a></li>
+                    <li><a [routerLink]="['FreeReminder']"><small>空闲提醒</small></a></li>
+                    <li><a [routerLink]="['MyMeetingSummary']"><small>我的会议纪要</small></a></li>
+                    <li><a [routerLink]="['MyHostMobileMeeting']"><small>我主持的移动会议</small></a></li>
+                    <li><a [routerLink]="['MyParticipationMobileMeeting']"><small>我参加的移动会议</small></a></li>
+                </ul>
+            </div>
+            <div class="column large-9">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

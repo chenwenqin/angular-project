@@ -1,0 +1,18 @@
+<table class="text-center hover" style="width:100%;margin:auto;">
+    <thead>
+        <tr>
+            <th class="text-center" colspan=7>{{Year}} - {{Month}}月</th>
+        </tr>
+        <tr>
+            <th class="text-center" *ngFor="let weekDay of weekDays">{{weekDay}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let oneWeek of monthDayArray">
+            <td *ngFor="let day of oneWeek">
+                <ng-container *ngIf="day == 0"></ng-container>
+                <ng-container *ngIf="day != 0">{{day}}</ng-container>
+            </td>
+        </tr>
+    </tbody>
+</table>

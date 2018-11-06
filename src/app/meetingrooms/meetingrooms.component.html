@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="column">
+        <table style="width:100%;margin:auto;font-size: 12px;">
+            <thead>
+                <tr>
+                    <th width=130 style="border:1px #eee solid;">会议室&功能</th>
+                    <th width=100 style="border:1px #eee solid;">容纳人数&设备</th>
+                    <th class="text-center" style="border:1px #eee solid;" *ngFor="let time of meetingTimeArray" colspan=2>{{time}}</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let room of meetingRooms">
+                    <td class="text-left" style="border:1px #eee solid;">{{room.name}}、{{room.roomFunctions}}</td>
+                    <td class="text-left" style="border:1px #eee solid;">{{room.capacity}}、{{room.equipments}}</td>
+                    <td class="text-center" style="border:1px #eee solid;" *ngFor="let time of availableTimeArray" data-reveal-id="applymeetingmodal">
+                        <ng-container>1</ng-container>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot class="text-center">
+                <tr>
+                    <td style="border:1px #eee solid;">会议室&功能</td>
+                    <td style="border:1px #eee solid;">容纳人数&设备</td>
+                    <td class="text-center" style="border:1px #eee solid;" *ngFor="let time of meetingTimeArray" colspan=2>{{time}}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+<form action="">
+    <div class="row">
+        <label for="email">邮箱
+            <input type="email" id="email" placeholder="邮箱">
+        </label>
+    </div>
+    <div class="row">
+        <label for="password">密码
+            <input type="password" id="password" placeholder="密码">
+        </label>
+    </div>
+    <div class="row">
+        <div class="column large-6">
+            <div class="row collapse prefix-round">
+                <div class="small-3 columns">
+                    <span class="button prefix">前置</span>
+                </div>
+                <div class="small-9 columns">
+                    <input type="text" placeholder="Value">
+                </div>
+            </div>
+        </div>
+        <div class="column large-6">
+            <div class="row collapse prefix-radius">
+                <div class="small-8 columns">
+                    <input type="text" placeholder="搜索">
+                </div>
+                <div class="small-4 columns">
+                    <a href="#" class="button postfix">后置</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column large-6">
+            <div class="row collapse prefix-radius">
+                <div class="column large-9">
+                    <input type="text">
+                </div>
+                <div class="column large-3">
+                    <input type="button" class="button postfix" value="后置">
+                </div>
+            </div>
+        </div>
+        <div class="column large-6">
+            <div class="row collapse prefix-round">
+                <div class="column large-3">
+                    <input type="button" class="button prefix" value="前置">
+                </div>
+                <div class="column large-9">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column large-3">
+            <label class="text-right inline" for="age">年龄</label>
+        </div>
+        <div class="column large-9">
+            <input id="age" type="text" placeholder="输入年龄">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column large-3">
+            <label class="text-right inline" for="sex">性别</label>
+        </div>
+        <div class="column large-9">
+            <input id="sex" type="text" placeholder="输入性别">
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function() {
+        $(document).foundation();
+    })
+</script>
