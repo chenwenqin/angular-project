@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatListModule, MatTableModule, MatGridListModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +29,9 @@ import { MyMeetingSummaryComponent } from './my-meeting-summary/my-meeting-summa
 import { MyHostMobileMeetingComponent } from './my-host-mobile-meeting/my-host-mobile-meeting.component';
 import { MyParticipationMobileMeetingComponent } from './my-participation-mobile-meeting/my-participation-mobile-meeting.component';
 import { MeetingService } from './meeting.service';
+import { MeetingRoomManagementComponent } from './meeting-room-management/meeting-room-management.component';
+
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
@@ -46,12 +54,20 @@ import { MeetingService } from './meeting.service';
     FreeReminderComponent,
     MyMeetingSummaryComponent,
     MyHostMobileMeetingComponent,
-    MyParticipationMobileMeetingComponent
+    MyParticipationMobileMeetingComponent,
+    MeetingRoomManagementComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatListModule,
+    MatTableModule,
+    MatGridListModule,
+    FormsModule
   ],
   providers: [MeetingService],
   bootstrap: [AppComponent]

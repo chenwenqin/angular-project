@@ -11,12 +11,13 @@
             </ul>
             <section class="top-bar-section">
                 <ul class="left">
-                    <li class="active"><a [routerLink]="['/Home']">物理会议室预定</a></li>
-                    <li><a [routerLink]="['/MyMeeting']">我的会议</a></li>
-                    <li><a [routerLink]="['/MeetingManagement']">会议室管理办法</a></li>
-                    <li><a [routerLink]="['/MeetingRoomApprove']">会议室审批</a></li>
-                    <li><a [routerLink]="['/MeetingRoomStatistics']">会议室统计</a></li>
-                    <li><a [routerLink]="['/OrganizationManagement']">组织结构管理</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/Home']">物理会议室预定</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/MyMeeting']">我的会议</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/MeetingRoomManagement']">会议室管理办法</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/MeetingManagement']">会议管理</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/MeetingRoomApprove']">会议室审批</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/MeetingRoomStatistics']">会议室统计</a></li>
+                    <li routerLinkActive='active'><a [routerLink]="['/OrganizationManagement']">组织结构管理</a></li>
                 </ul>
             </section>
         </nav>

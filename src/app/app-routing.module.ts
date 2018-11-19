@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CalendarComponent } from './calendar/calendar.component';
 import { Code404Component } from './code404/code404.component';
 import { HomeComponent } from './home/home.component';
 import { MymeetingComponent } from './mymeeting/mymeeting.component';
@@ -14,6 +13,7 @@ import { FreeReminderComponent } from './free-reminder/free-reminder.component';
 import { MyMeetingSummaryComponent } from './my-meeting-summary/my-meeting-summary.component';
 import { MyHostMobileMeetingComponent } from './my-host-mobile-meeting/my-host-mobile-meeting.component';
 import { MyParticipationMobileMeetingComponent } from './my-participation-mobile-meeting/my-participation-mobile-meeting.component';
+import { MeetingRoomManagementComponent } from './meeting-room-management/meeting-room-management.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
@@ -28,6 +28,7 @@ const routes: Routes = [
     {path: 'MyParticipationMobileMeeting', component: MyParticipationMobileMeetingComponent},
     {path: '**', component: Code404Component}
   ]},
+  {path: 'MeetingRoomManagement', component: MeetingRoomManagementComponent},
   {path: 'MeetingManagement', component: MeetingManagementComponent},
   {path: 'MeetingRoomApprove', component: MeetingRoomApproveComponent},
   {path: 'MeetingRoomStatistics', component: MeetingRoomStatisticsComponent},
